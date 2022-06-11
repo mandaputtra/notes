@@ -54,3 +54,4 @@ https://github.com/wardviaene/terraform-course/tree/master/demo-18b
 
 https://www.terraform.io/cli/state
 
+https://github.com/wardviaene/terraform-course/tree/master/state-manipulation
