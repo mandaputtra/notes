@@ -6,3 +6,5 @@ https://www.packer.io/plugins/builders/amazon
 - Create an AMI with all necessary software
 - Can speed up boot times of instance
 - Common approach when you run horizontally scaled app layer or a cluster of something
+
+https://github.com/wardviaene/terraform-course/tree/master/packer-demo
