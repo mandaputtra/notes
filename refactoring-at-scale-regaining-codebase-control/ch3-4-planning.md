@@ -1,4 +1,4 @@
-# CH2 Planning
+# Part 2 Planning
 
 Refactoring also need some planning
 
@@ -54,7 +54,11 @@ We primarily think of version control as a tool to manage changes to our applica
 
 ### Commit Message
 
+Measuring code complexity can be done in commit message
+
 ### Commits Aggregate
+
+We can apply the same concept of change frequencies to files as well. By looking at individual commits, we can carefully attribute changes to respective functions within individual files, producing total frequency numbers for each of them. By combining this data with one of our earlier complexity metrics, lines of code, we can map complexity changes over time across the entire codebase. This information shows us potential hotspots ripe for improvement. We can later regenerate these metrics once we’ve completed our refactor to confirm that not only the complexity of these hotspots decreased, but hopefully their change frequency had as well.
 
 ## Reputation
 
@@ -67,3 +71,25 @@ Software have some reputation in every part of it. There are some part of a soft
 - How the complexity of X hinder you from developing new features?
 - Does the complexity of X can hinder your ability to test and debug?
 - How does the complexity of X hinder your ability to review other developer work/PR?
+
+## Drafting A Plan
+
+We should define our end state.
+
+- Mapping the shortest distance, we should know what plan are the most quick to implement.
+- Write down every step of the refactoring carefully, from where we should start
+- Gather some coworker who might be interested in the project
+- Evaluate every step what are the direct impact? Is it good for DX/Bussiness?
+- Create a backup, in case we screw up.
+- Create a rollout strategy, better refactoring should be deployed step by step
+
+## Cleaning Up Artifact
+
+- Check if every comment still okay
+- Check if the code are still used, if not just remove it (remove dead code)
+- Use feature flag to rollout
+- Shield our refactor from other developer by using an abstraction
+- Check if the unit test still used, if not remove it.
+
+## Avoid Scope Creep
+> While other teams’ ideas and outlooks are incredibly helpful in finalizing our execution plan, we have to continue to focus on our ultimate goal so as not to introduce any additional scope accidentally. There might be a handful of small, new steps we need to add to our plan to handle an edge case or two properly that we hadn’t previously considered; however, we should be careful to add only what is absolutely necessary to ensure that we can reach our desired end state while maintaining our major milestones.
